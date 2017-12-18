@@ -1,0 +1,315 @@
+/* Style sheet created by Russ on 12/11/17 */
+
+/*NAV BAR JS STYLE START */
+/*image properties*/
+.dropbtn {
+    background-color: #4b5970;
+    color: white;
+    padding: 0px;
+	height:36px;
+	width: 36px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #333333;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	float: right;
+	margin-right: 2.5em;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1em;
+	font-weight: bold; 
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {
+	display:block;
+}
+/*NAV BAR JS STYLE END */
+
+/* style specifies to hide the desktop class */
+	.desktop {
+		display: none;
+	}
+	.desktopcont {
+		display: none;
+	}
+
+/* Style for body specifies a background color */
+body {
+	background-color: #8ed4e5;
+}
+/*bootstrap jumbotron text-center background color*/
+#bootback {
+	background-color: #8ed4e5;
+}
+/*bootstrap container moving up */
+.container {
+	margin-top: -5em;
+	padding: .5em;
+}
+
+#title{ 
+	width: 65%;
+}
+#title img{ 
+	width: 100%;
+}
+
+#image img{ 
+	width: 100%;
+}
+
+#contain{ 
+	width: 100%;
+	background-color: #00001a;
+}
+#contain p {
+	font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+}
+#contain h4 {
+	font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+}
+#contain h3{
+	font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+}
+#contain h2{
+	font-family: 'Ubuntu', sans-serif;
+	color: #ffffff;
+}
+#contain h1{
+	font-family: 'Ubuntu', sans-serif;
+	color: #ffffff;
+	text-align: center;
+}
+.mobile a {
+	text-decoration: none;
+	color: #4ccbf4;
+}
+main {
+	padding: 1em;
+}
+/*style for main h1 in about*/
+main h1 {
+	color: #cccccc;
+	font-family: 'Roboto', sans-serif;	
+}
+/* style for image and info button in about page */
+#tankleft {
+	width: 40%;
+	border: 2px solid #cccccc;
+}
+#infoBtn {
+	border: 2px solid #189acc;
+	padding: .4em;
+	border-radius: 2em;
+	background-color: grey;
+	text-decoration: none;
+	color: #e2edff;
+}
+/* END style for image and info button in about page */
+
+/*about page price styles*/
+#price {
+	text-align: center; 
+	padding: 1em; 
+	background-color:#003996;	
+}
+#price h2 {
+	text-decoration: underline;
+}
+/*end about price styles*/
+
+/* contact page info section*/
+#hrscont {
+	background-color: #cccccc;
+	padding: .7em;
+} 
+#hrscont p {
+	color: black;
+}
+#hrscont h4 {
+	color: black;
+}
+/* END contact page info section*/
+
+/* contact form style*/
+#booking {
+	display: block;
+}
+#booking form label {
+	color: #ffffff;
+}
+#buttonContainer {
+	margin-top: .7em;
+}
+textarea{
+	width: 100%;
+	height: 5em;
+}
+#charNum {
+	font-family: 'Roboto', sans-serif;	
+	font-weight: bold;
+	color: white;
+}
+/*end contact styles*/
+
+/*style for columns in future page*/
+.col-sm-6{
+	margin-bottom:2em;
+}
+
+main h2 {
+	text-align: center;
+}
+
+#footer{ 
+	width: 100%;
+	text-align:center;
+	padding: 1em;
+	color: #ffffff;
+	font-size: 1em;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: bold;
+	background-image: url("../images/dark.jpg");
+}
+footer {
+	overflow: hidden;
+}
+footer a {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+
+
+/* media query for tablet viewport targets screen size with a minimum width of 660 */
+/*_______________________--------------_______________________________________*/
+
+@media only screen and (min-width: 710px) {
+	/* style specifies to hide the mobile class */
+	.mobile {
+		display: none;
+	}
+	/* style specifies to hide the dropdown class */
+	.dropdown {
+		display: none;
+	}
+	/* desktop NAVIGATION */
+	.desktop {
+		display: inline;
+		float: right;
+		margin-top: 2em;
+		font-family: 'Ubuntu', sans-serif;
+		font-size: 1em;
+		font-weight: bold; 
+	}
+	.desktop li {
+		display: inline;
+
+	}
+	.desktop li a {
+		 padding: .5em;
+		 margin-right: 1em;
+		 text-decoration: none;
+		 color:#033c44;
+	}
+	.desktopcont {
+		display: block;
+	}
+	/*image title*/ 
+	#title{ 
+		width: 45%;
+	}
+	
+	/*style for images in the figure element*/
+	figure img {
+		background-color: #cccccc;
+		display: inline;
+		height: 8em;
+		width: 28%;
+		margin: 1%;
+		padding: 1%;
+	}
+	
+	/*style for anchor elements within the figure elements*/
+	figure a {
+		background-color: transparent;
+		padding: 0;
+		text-decoration: none;
+	}
+	main h1{
+		text-align: center;
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: bold;
+		color: #cccccc;
+	}
+	main a{
+		text-decoration: none;
+	}
+	
+}
+/* media query for Desktop viewport targets screen size with a minimum width of 1075px */
+/*_______________________--------------_______________________________________*/
+@media only screen and (min-width: 1075px) {
+/* style specifies to hide the dropdown class */
+	.desktop li {
+		display: inline-block;
+	}
+	.desktop li a {
+		 padding: 2.1em;
+	}
+		/* style rules for pseudo classes */
+	nav li a:visited {
+		color:#033c44;
+	}
+	nav li:hover {
+		border: .1em solid white;
+		border-radius: .2em;
+		background-color: black;
+		padding: 3px;
+	}
+	
+	#infoBtn:hover {
+		padding: 1em;
+	}
+	nav li a:hover {
+		color: #58cef6;
+	}
+	nav li a:active {
+		color:#002156;
+	}
+	
+		/*style applies height and opacity to images within figure element*/
+	figure img {
+		height:15em;
+	}
+}

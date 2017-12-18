@@ -1,0 +1,156 @@
+ <!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact </title>
+	<meta name="viewport"content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Ubuntu" rel="stylesheet">
+</head>
+<body onload="validDate()">
+	<!--navigation dropdown for mobile-->
+	<div class="dropdown">
+		<img src="images/navdrop.jpg" alt="ddimage" onclick="dropNav()" class="dropbtn">
+		<div id="myDropdown" class="dropdown-content">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="book.html">Book</a>
+			<a href="future.html">Future</a>
+		</div>
+	</div>
+	<!--navigation for tablet and desktop-->
+	<div class="desktop">
+		<nav>
+			<ul> 
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About </a></li>
+				<li><a href="book.html">Book</a></li>
+				<li><a href="future.html">Future</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<!--title image-->
+	<div id="title"> 
+		<img src="images/title.png" alt="virtatech title">
+	</div>
+	<!--banner image-->
+	<div id="image">
+		<img src="images/mains.jpg" align="middle" alt="virtatechpic" id="vtpic">
+	</div>
+	<!--webpage content-->
+	<div id="contain">
+		<main>
+			<div class="container-fluid">
+				<h1>Schedule a Float!</h1>
+				<p>Fill out the form below to reserve a float of your choice.</p>
+				<p>You will receive a confirmation email and paypal invoice. In order to reserve your appointment, you must click the link to confirm and pay.</p>
+				<div class="row">
+					<div class="col-sm-4" id="hrscont">
+						<h4>Business Information:</h4>
+						<p><b>Address:</b> 1434-a Main Street, Planet Earth, NY 11892</p>
+						<p><b>Our Hours:</b> Monday - Sunday: 7:00am - 12:00am</p>
+						<p><b>Phone Number:</b> 1(814)555-9608</p>						
+					</div>
+					<div class="col-sm-8" style="background-color:;">
+						<div id="booking">
+							<form action="" id="form" name="form1">
+								<fieldset>
+									<hr>
+									<p>Name:</p><input type="text" name="name" value="" required>
+									<hr>
+									<p>Email:</p><input type="text" name="emailInput" id="emailbox"value=""required>
+									<hr>
+									<h4>Type of Float:</h4>
+									
+									<select required>
+									<option disabled selected value> select  </option>
+									<option value="stanFlo">Standard Float</option>
+									<option value="vrFlo">Virtual Reality Float</option>
+									</select>
+									
+									<!--
+									future i will make these buttons
+									<input id="stanFlo" name="floatType" type="checkbox"/>
+									<label for="stanFlo">Standard Float</label></br>
+									<input id="vrFlo" name="floatType" type="checkbox"/>
+									<label for="vrFlo">VirtuaTech Float</label></br>-->
+									
+									<hr>
+									<h4>Type of Tank:</h4>
+									<select required>
+									<option disabled selected value> select  </option>
+									<option value="tankB">Large tank</option>
+									<option value="tankS">Small pod</option>
+									</select>
+									
+									<!--
+									<input id="tankB" name="tankType" type="checkbox"/>
+									<label for="tankB">Large tank</label></br>
+									<input id="tankS" name="tankType" type="checkbox" />
+									<label for="tankS">Small pod</label></br>-->
+									<hr>
+									<h4>Date:</h4><input id="date" type="date" name="date" required ></br>
+									<hr>
+									<h4>Time:</h4><select id="floTime" required>
+									<hr>
+										<option disabled selected value> select  </option>
+									  <option value="7">7:00am</option>
+									  <option value="8">8:00am</option>
+									  <option value="9">9:00am</option>
+									  <option value="10">10:00am</option>
+									  <option value="11">11:00am</option>
+									  <option value="12">12:00pm</option>
+									  <option value="13">1:00pm</option>
+									  <option value="14">2:00pm</option>
+									  <option value="15">3:00pm</option>
+									  <option value="16">4:00pm</option>
+									  <option value="17">5:00pm</option>
+									  <option value="18">6:00pm</option>
+									  <option value="19">7:00pm</option>
+									  <option value="20">8:00pm</option>
+									  <option value="21">9:00pm</option>
+									  <option value="22">10:00pm</option>
+									  <option value="23">11:00pm</option>
+									  <option value="24">12:00am</option>
+								   </select>
+								   <br>
+								   <hr>
+								   <h4>Comments:</h4>
+								   <textarea id="customText" name="CustomText" placeholder="(max 250 characters)" onkeyup="countChar(this)" maxlength='250'></textarea>
+								   <div id="charNum"></div>
+								</fieldset>
+								<hr>	
+								<div id="buttonContainer">
+									<input type="button" onclick="resetForm()" value="Reset" style="color:black;">
+									<input type="submit" value="Submit" onclick = "validateForm();"style="color:black;"> 
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+    	</main>
+	</div>
+	<footer>
+		<div id="footer">
+			&copy; Copyright 2017. All Rights Reserved. 
+			<br/>
+			<a href="mailto:info@virtuatech.com">info@virtuatech.com</a>
+		</div>
+	</footer>
+	<script src = "script.js"></script>
+	<script> 
+	/*alert when form is submitted */ 
+		function confirmBooking() {
+			alert("Thank you for your request, please check your email to confirm and pay for your float.");
+			}
+
+		document.getElementById("form").addEventListener("submit", confirmBooking, false);
+	</script>
+	
+</body>
+</html>
